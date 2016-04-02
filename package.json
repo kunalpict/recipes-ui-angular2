@@ -1,7 +1,7 @@
 {
-  "name": "angular2-starter",
-  "author": "Dan Wahlin",
-  "version": "0.8.0",
+  "name": "recipe-projector",
+  "author": "Kunal Chaudhari",
+  "version": "0.0.1",
   "scripts": {
     "postinstall": "npm run typings install",
     "tsc": "tsc",

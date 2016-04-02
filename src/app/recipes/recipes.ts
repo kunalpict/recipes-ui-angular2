@@ -5,7 +5,7 @@ import { DataService } from '../shared/services/data.service';
 
 @Component({ 
   selector: 'recipes',
-  providers: [],
+  providers: [DataService],
   templateUrl: 'app/recipes/recipes.component.html',
   directives: [CORE_DIRECTIVES, RouterLink]
 })
@@ -13,12 +13,18 @@ export class RecipesComponent {
 	
 	title: string = 'Recipes';
     filteredOrders: any[] = [];
+    recipes: any[] = [];
   
-    constructor(private _routeParams: RouteParams) {
+    constructor(private dataService: DataService, private _routeParams: RouteParams) {
       
     }
     
     ngOnInit() {
     	this.title = 'recipes';
+      this.dataService.getRecipes()
+        .subscribe((recipes:any[]) => {
+          console.log(recipes);
+          this.recipes = recipes;
+        });
     }
 }

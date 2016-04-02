@@ -1,1 +1,10 @@
-test this component {{title}}
+<div>
+	<span>Recipe here</span>
+	<span>Select your favourite recipes</span>
+	<ul>
+	<li *ngFor="#recipe of recipes">
+		<a href="#recipe/{{recipe.id}}">{{recipe.name}}</a>
+		<span>{{recipe.category}}</span>
+	</li>
+	</ul>
+</div>

@@ -25,6 +25,12 @@ export class DataService {
                       .map((res: Response) => res.json())
                       .catch(this.handleError);               
     }
+
+    getRecipes(){
+        return this.http.get(this.baseUrl + '/recipes.json')
+                        .map((res: Response) => res.json())
+                        .catch(this.handleError);
+    }
     
     handleError(error: any) {
         console.error(error);
