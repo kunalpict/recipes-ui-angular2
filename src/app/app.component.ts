@@ -10,6 +10,7 @@ import { RecipeComponent } from './recipe/recipe';
 })
 @RouteConfig([
   { path: '/', as: 'Recipes', component: RecipesComponent, useAsDefault: true },
+  { path: '/recipes/:category', as: 'Recipes', component: RecipesComponent},
   { path: '/recipe/:id', as: 'Recipe', component: RecipeComponent    }
 ])
 export class AppComponent {

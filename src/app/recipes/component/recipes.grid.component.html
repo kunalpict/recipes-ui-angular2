@@ -1,0 +1,35 @@
+<div class="row">
+  <div *ngFor="#recipe of recipes" class="col-xs-12 col-sm-6 col-md-6" style="">
+  	<div class="container-fluid" style="border: 1px solid gray; margin: 5px;border-radius: 10px;">
+  		<div  class="row" style="padding:5px;">
+  			<div class="col-xs-12 col-sm-12 col-md-4" style="text-align: center;">
+  				<img src="{{recipe.icon}}" width="60%" height="60%" alt="logo">
+  			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-8">
+  				<div class="row">
+  					<a href="#recipe/{{recipe.id}}" style="font-size: 18px;font-weight: bold;padding-bottom: 10px;font-weight: bold;font-style: italic;">{{recipe.name}}</a>
+					</div>
+					<div  class="row" style="padding-bottom: 10px;font-weight: bold;font-style: italic;">
+						<fieldset class="rating">
+						    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+						    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+						    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+						    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+						    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+						</fieldset>
+					</div>
+					<div  class="row" style="padding-bottom: 10px;font-weight: bold;font-style: italic;">
+						<span style="">Recipe By: {{recipe.recipeBy}}
+						</span>
+					</div>
+					<div  class="row"  style="padding-bottom: 10px; font-style: italic;">
+						<span>Gol gappa is a very popular Indian street food, just like samosas. Each gol gappa is stuffed with fresh garbanzo beans (chick peas) and boiled potatoes, then topped with savory chutneys and spices. They are so addicting you’ll find that though this recipe serves 3, you may consume them all for yourself. I almost did… </span><span><a href="#recipe/{{recipe.id}}">more</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<span style="padding-bottom: 10px;font-weight: bold;font-style: italic;"></span>
+			</div>			
+		</div>
+ 	</div>
+</div>

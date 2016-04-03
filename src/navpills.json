@@ -1,0 +1,27 @@
+[
+	{
+		"name":"snacks",
+		"count": 10,
+		"target": "/snacks"
+	},
+	{
+		"name":"breakfast",
+		"count": 8,
+		"target": "/breakfast"
+	},
+	{
+		"name":"starter",
+		"count": 15,
+		"target": "/starter"
+	},
+	{
+		"name":"Entre",
+		"count": 11,
+		"target": "/entre"
+	},
+	{
+		"name":"all",
+		"count": 30,
+		"target": "/All"
+	}
+]

@@ -20,14 +20,20 @@ export class DataService {
                         .catch(this.handleError);
     }
 
-    getOrders(){
+    getOrders() {
       return this.http.get(this.baseUrl + '/orders.json')
                       .map((res: Response) => res.json())
                       .catch(this.handleError);               
     }
 
-    getRecipes(){
-        return this.http.get(this.baseUrl + '/recipes.json')
+    getRecipes(private category: string) {
+        return this.http.get(this.baseUrl + '/recipes.'+ category +'.json')
+                        .map((res: Response) => res.json())
+                        .catch(this.handleError);
+    }
+
+    getNavPills() {
+        return this.http.get(this.baseUrl + '/navpills.json')
                         .map((res: Response) => res.json())
                         .catch(this.handleError);
     }
