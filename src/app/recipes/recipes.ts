@@ -7,7 +7,15 @@ import { RecipesGridComponent } from './component/recipes.grid';
 @Component({ 
   selector: 'recipes',
   providers: [DataService],
-  templateUrl: 'app/recipes/recipes.component.html',
+  template: `<div>
+  <span>Recipe here</span>
+  <span>Select your favourite recipes</span>
+
+  <ul class="nav nav-pills">
+    <li  *ngFor="#pill of navpills"><a href="#/recipes{{pill.target}}">{{pill.name}}({{pill.count}})</a></li>
+  </ul>
+  <recipes-grid [category]="category"></recipes-grid>   
+</div>`,
   directives: [CORE_DIRECTIVES, RouterLink, RecipesGridComponent]
 })
 export class RecipesComponent {

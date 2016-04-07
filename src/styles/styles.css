@@ -283,3 +283,12 @@ filter-textbox {
     top:2px;
     left:2px;
 }
+
+
+.nav-pills > li + li {
+    background: #027FF4;
+}
+
+.nav-pills > li a {
+    color: white;
+}
